@@ -1,0 +1,60 @@
+﻿@model AddressBook.Models.Employee
+
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("SaveEmployeeDetails", "Home", FormMethod.Post))
+        {
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.LabelFor(m => Model.Name)
+            </dt>
+            <dd>
+                @Html.TextBoxFor(m => Model.Name)
+            </dd>
+            <dt>
+                @Html.LabelFor(m => Model.Email)
+            </dt>
+            <dd>
+                @Html.TextBoxFor(m => Model.Email)
+            </dd>
+            <dt>
+                @Html.LabelFor(m => Model.Mobile)
+            </dt>
+            <dd>
+                @Html.TextBoxFor(m => Model.Mobile)
+            </dd>
+            <dt>
+                @Html.LabelFor(m => Model.Landline)
+            </dt>
+            <dd>
+                @Html.TextBoxFor(m => Model.Landline)
+            </dd>
+            <dt>
+                @Html.LabelFor(m => Model.Website)
+            </dt>
+            <dd>
+                @Html.TextBoxFor(m => Model.Website)
+            </dd>
+            <dt>
+                @Html.LabelFor(m => Model.Address)
+            </dt>
+            <dd>
+                @Html.TextBoxFor(m => Model.Address)
+            </dd>
+            <dt>
+                @Html.HiddenFor(m => Model.ID)
+            </dt>
+
+        </dl>
+            <input type="submit" value="Submit" class="submit" />
+        }
+
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

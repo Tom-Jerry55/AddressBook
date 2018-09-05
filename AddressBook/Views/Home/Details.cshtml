@@ -1,0 +1,47 @@
+﻿@model AddressBook.Models.Employee
+
+<div>
+    <h4> @Html.DisplayFor(model => model.Name)</h4>
+ 
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Landline)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Landline)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Website)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Website)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+    </dl>
+
+    <div>
+        <span onclick="UpdateEmployee(@Model.ID)">Edit</span>
+        @Html.ActionLink("Delete", "DeleteEmployee", new {id=Model.ID }) |
+    </div>
+</div>
+@*<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>*@

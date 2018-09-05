@@ -1,0 +1,29 @@
+﻿@model IEnumerable<AddressBook.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="main-container">
+    <div class="fluid-container col-sm-3 ">
+        <ul class="list-group">
+            @foreach (var item in Model)
+            {
+
+                <li class="list-group-item" onclick="result(@item.ID)">
+                    <h2>@item.Name</h2>
+                    <p class="appended-email">@item.Email</p>
+                    <p>@item.Mobile</p>
+                </li>
+            }
+        </ul>
+    </div>
+    <div>
+        @{
+            Html.RenderPartial("GetEmployees");
+        }
+    </div>
+    <div class="fluid-container col-sm-3 listOfCustomers">
+
+    </div>
+</div>
