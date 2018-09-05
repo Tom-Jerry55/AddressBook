@@ -15,6 +15,5 @@ namespace AddressBook.Models
         public string Website { get; set; }
         public string Address { get; set; }
         public int DeptId { get; set; }
-       
     }
 }
